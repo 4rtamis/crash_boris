@@ -68,7 +68,7 @@
 }
 
 .image-wrapper {
-  width: 50%;
+  width: 55%;
   margin: 1em auto;
   padding: 0.5em;
   border: 3px solid $grey;
@@ -76,6 +76,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
+  transition: all 0.1s ease;
+
+  &:hover {
+    padding: 0.2em;
+  }
 
   img {
     width: 100%;

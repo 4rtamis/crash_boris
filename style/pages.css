@@ -147,7 +147,7 @@ body div {
 }
 
 .image-wrapper {
-  width: 50%;
+  width: 55%;
   margin: 1em auto;
   padding: 0.5em;
   border: 3px solid #ccc;
@@ -164,6 +164,14 @@ body div {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+
+.image-wrapper:hover {
+  padding: 0.2em;
 }
 
 .image-wrapper img {
