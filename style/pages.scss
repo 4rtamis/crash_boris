@@ -1,1 +1,174 @@
 @import "base";
+@import "animation";
+
+.main-container {
+  border: 1px solid $grey;
+  color: #ddd;
+  width: 100%;
+  max-width: 20rem;
+  min-height: 15rem;
+  padding: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  &:after,
+  &:before {
+    content: "";
+    color: $grey;
+    position: absolute;
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+
+  &:before {
+    bottom: -0.5rem;
+    right: -0.5rem;
+    border-bottom: 1px solid $grey;
+    border-right: 1px solid $grey;
+  }
+
+  &:after {
+    top: -0.5rem;
+    left: -0.5rem;
+    border-top: 1px solid $grey;
+    border-left: 1px solid $grey;
+  }
+}
+
+.header {
+  border-top: 1px solid $grey;
+  border-bottom: 1px solid $grey;
+  line-height: 2rem;
+  font-size: 1.875rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  position: relative;
+  vertical-align: baseline;
+
+  &:before {
+    content: "";
+    position: absolute;
+    left: -0.5rem;
+    background-color: $red;
+    width: 0.25rem;
+    height: 0.25rem;
+    margin: 0.875rem 0 0 0;
+    border-radius: 50%;
+  }
+}
+
+.description {
+  margin: 0.5em 0;
+  font-family: $font-text;
+  font-size: 0.9rem;
+  color: $grey;
+  text-transform: uppercase;
+}
+
+.image-wrapper {
+  width: 50%;
+  margin: 1em auto;
+  padding: 0.5em;
+  border: 3px solid $grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 100%;
+  }
+}
+
+.inventory-header {
+  margin-top: 2em;
+  text-transform: uppercase;
+  text-align: center;
+  border-top: 1px solid $grey;
+  font-size: 1em;
+}
+
+.inventory-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  border-top: 1px solid $grey;
+  padding: 1em 0;
+
+  .item-card {
+    background: none;
+    border: 3px solid $grey;
+    cursor: pointer;
+    width: 4.7rem;
+    height: 4.7rem;
+    color: $grey;
+    display: flex;
+    line-height: 1;
+    flex-direction: column;
+    outline: none;
+    margin: 0.5em 0;
+    padding: 0.25rem;
+    position: relative;
+    transition: border-color 250ms ease-in-out, color 250ms ease-in-out;
+
+    &:after {
+      content: "";
+      border-top: 1rem solid transparent;
+      border-bottom: 1rem solid transparent;
+      border-left: 1rem solid #ccc;
+      transform: rotate(45deg);
+      position: absolute;
+      bottom: -0.4rem;
+      right: 0.075rem;
+      transition: border-color 250ms ease-in-out;
+    }
+
+    h3 {
+      font-size: 2rem;
+      font-weight: normal;
+      transition: color 250ms ease-in-out;
+    }
+
+    p {
+      font-size: 1rem;
+      font-weight: normal;
+      transition: color 250ms ease-in-out;
+    }
+
+    &:hover {
+      color: $red;
+      border-color: $red;
+
+      h3,
+      p {
+        color: $red;
+      }
+
+      &:after {
+        border-left-color: $red;
+      }
+    }
+
+    &.active {
+      color: $red;
+      border-color: $red;
+
+      h3,
+      p {
+        color: $red;
+      }
+
+      &:after {
+        border-left-color: $red;
+      }
+    }
+  }
+
+  .item-card.unknown-item {
+    justify-content: center;
+    align-items: center;
+  }
+}

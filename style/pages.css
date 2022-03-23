@@ -1,12 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,300;0,400;0,700;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@300;400;500;700&display=swap");
 * {
   margin: 0;
   padding: 0;
+  font-family: "Saira Extra Condensed", sans-serif;
+  color: white;
 }
 
 html {
   width: 100%;
   height: 100%;
+  padding: 1em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   background: #191919;
   background-image: -webkit-gradient(linear, left top, right top, color-stop(1rem, #111), color-stop(1rem, transparent)), -webkit-gradient(linear, left top, left bottom, color-stop(1rem, #111), color-stop(1rem, transparent));
   background-image: linear-gradient(90deg, #111 1rem, transparent 1rem), linear-gradient(#111 1rem, transparent 1rem);
@@ -16,5 +22,263 @@ html {
 body {
   width: 100%;
   height: 100%;
+}
+
+@-webkit-keyframes entrance {
+  to,
+  20%,
+  40%,
+  60%,
+  80% {
+    opacity: 0.3;
+  }
+  from,
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    opacity: 0;
+  }
+}
+
+@keyframes entrance {
+  to,
+  20%,
+  40%,
+  60%,
+  80% {
+    opacity: 0.3;
+  }
+  from,
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    opacity: 0;
+  }
+}
+
+body div {
+  -webkit-animation: entrance 200ms 0ms linear backwards 1;
+  animation: entrance 200ms 0ms linear backwards 1;
+}
+
+.main-container {
+  -webkit-animation: entrance 400ms 200ms linear backwards 1;
+  animation: entrance 400ms 200ms linear backwards 1;
+}
+
+.image-wrapper {
+  -webkit-animation: entrance 500ms 300ms linear backwards 1;
+  animation: entrance 500ms 300ms linear backwards 1;
+}
+
+.inventory-container {
+  -webkit-animation: entrance 500ms 500ms linear backwards 1;
+  animation: entrance 500ms 500ms linear backwards 1;
+}
+
+.main-container {
+  border: 1px solid #ccc;
+  color: #ddd;
+  width: 100%;
+  max-width: 20rem;
+  min-height: 15rem;
+  padding: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.main-container:after, .main-container:before {
+  content: "";
+  color: #ccc;
+  position: absolute;
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
+.main-container:before {
+  bottom: -0.5rem;
+  right: -0.5rem;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+
+.main-container:after {
+  top: -0.5rem;
+  left: -0.5rem;
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+}
+
+.header {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  line-height: 2rem;
+  font-size: 1.875rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  position: relative;
+  vertical-align: baseline;
+}
+
+.header:before {
+  content: "";
+  position: absolute;
+  left: -0.5rem;
+  background-color: #b51717;
+  width: 0.25rem;
+  height: 0.25rem;
+  margin: 0.875rem 0 0 0;
+  border-radius: 50%;
+}
+
+.description {
+  margin: 0.5em 0;
+  font-family: "Exo 2", sans-serif;
+  font-size: 0.9rem;
+  color: #ccc;
+  text-transform: uppercase;
+}
+
+.image-wrapper {
+  width: 50%;
+  margin: 1em auto;
+  padding: 0.5em;
+  border: 3px solid #ccc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.image-wrapper img {
+  width: 100%;
+}
+
+.inventory-header {
+  margin-top: 2em;
+  text-transform: uppercase;
+  text-align: center;
+  border-top: 1px solid #ccc;
+  font-size: 1em;
+}
+
+.inventory-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border-top: 1px solid #ccc;
+  padding: 1em 0;
+}
+
+.inventory-container .item-card {
+  background: none;
+  border: 3px solid #ccc;
+  cursor: pointer;
+  width: 4.7rem;
+  height: 4.7rem;
+  color: #ccc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  outline: none;
+  margin: 0.5em 0;
+  padding: 0.25rem;
+  position: relative;
+  -webkit-transition: border-color 250ms ease-in-out, color 250ms ease-in-out;
+  transition: border-color 250ms ease-in-out, color 250ms ease-in-out;
+}
+
+.inventory-container .item-card:after {
+  content: "";
+  border-top: 1rem solid transparent;
+  border-bottom: 1rem solid transparent;
+  border-left: 1rem solid #ccc;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  position: absolute;
+  bottom: -0.4rem;
+  right: 0.075rem;
+  -webkit-transition: border-color 250ms ease-in-out;
+  transition: border-color 250ms ease-in-out;
+}
+
+.inventory-container .item-card h3 {
+  font-size: 2rem;
+  font-weight: normal;
+  -webkit-transition: color 250ms ease-in-out;
+  transition: color 250ms ease-in-out;
+}
+
+.inventory-container .item-card p {
+  font-size: 1rem;
+  font-weight: normal;
+  -webkit-transition: color 250ms ease-in-out;
+  transition: color 250ms ease-in-out;
+}
+
+.inventory-container .item-card:hover {
+  color: #b51717;
+  border-color: #b51717;
+}
+
+.inventory-container .item-card:hover h3,
+.inventory-container .item-card:hover p {
+  color: #b51717;
+}
+
+.inventory-container .item-card:hover:after {
+  border-left-color: #b51717;
+}
+
+.inventory-container .item-card.active {
+  color: #b51717;
+  border-color: #b51717;
+}
+
+.inventory-container .item-card.active h3,
+.inventory-container .item-card.active p {
+  color: #b51717;
+}
+
+.inventory-container .item-card.active:after {
+  border-left-color: #b51717;
+}
+
+.inventory-container .item-card.unknown-item {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=pages.css.map */
