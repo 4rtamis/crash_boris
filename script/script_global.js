@@ -1,11 +1,11 @@
 //verify all the items and fill the inventory
 var parts = new Map();
-parts.set("coque", ["CO", "Coque Principale"]);
+parts.set("coque_principale", ["CO", "Coque Principale"]);
 parts.set("réacteur", ["RE", "Réacteur"]);
 parts.set("gravitateur", ["GR", "Gravitateur"]);
 parts.set("hublot", ["HU", "Hublot"]);
 parts.set("atterrisseur", ["AT", "Atterrisseur"]);
-parts.set("batte", ["BA", "Batte Interstellaire"]);
+parts.set("batte_interstellaire", ["BA", "Batte Interstellaire"]);
 
 check = true;
 for (var [key, value] of parts) {
@@ -26,5 +26,7 @@ for (var [key, value] of parts) {
   }
 }
 if (check) {
-  window.location = "https://crashboris.h.minet.net/win.html";
+    if (window.confirm("Vous avez gagner, accepter pour aller à la page du certificat !!")) {
+        window.location = "https://crashboris.h.minet.net/win.html";
+    }
 }

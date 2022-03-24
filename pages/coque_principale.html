@@ -7,15 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="viewport" content="height=device-height, initial-scale=1.0" />
     <link rel="stylesheet" href="../style/pages.css" />
-    <title>Sticker</title>
+    <title>La coque principale</title>
 </head>
 
 <body>
     <div class="main-container">
-        <h2 class="header">Sticker</h2>
+        <h2 class="header">La coque principale</h2>
         <p class="description">
-            Un magnifique sticker de l’animation ! Honnêtement, ça ne sert à rien, mais vous pouvez quand même aller en
-            récupérer un vrai à l’entrée !
+            Voici la partie la plus importante du vaisseau, c’est aussi simple que ça. Sans elle, pas de Boris. Pas de
+            Boris, pas d’animation. Pas d’animation, pas de tournoi. Pas de tournoi… pas de tournoi.
         </p>
         <figure class="image-wrapper">
             <img src="../res/_placeholder.jpg" alt="Placeholder" />
@@ -49,6 +49,13 @@
         </div>
     </div>
 </body>
+<script>
+    const item_name = "coque_principale";
+    if (!localStorage.getItem(item_name)) {
+        localStorage.setItem(item_name, true);
+    }
+    document.getElementById(item_name).classList.add("active");
+</script>
 <script src="../script/script_global.js"></script>
 
 </html>
