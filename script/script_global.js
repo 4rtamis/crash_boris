@@ -26,7 +26,11 @@ for (var [key, value] of parts) {
   }
 }
 if (check) {
-    if (window.confirm("Vous avez gagner, accepter pour aller à la page du certificat !!")) {
-        window.location = "https://crashboris.h.minet.net/win.html";
-    }
+  if (
+    window.confirm(
+      "Vous avez gagné, accepter pour aller à la page du certificat !!"
+    )
+  ) {
+    window.location = "https://crashboris.h.minet.net/win.html";
+  }
 }
