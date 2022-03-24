@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="height=device-height, initial-scale=1.0" />
+    <link rel="shortcut icon" href="res/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../style/pages.css" />
+    <title>Félicitations</title>
+  </head>
+
+  <body>
+    <div class="main-container">
+      <h2 class="header">Felicitations</h2>
+      <p class="description">
+        Vous avez récupéré toutes les pièces importantes du vaisseau de Boris.
+        Allez présenter cette page web à Clément Safon ou Julien Ribiollet pour
+        voir si vous êtes le premier à y parvenir !
+      </p>
+      <figure class="image-wrapper">
+        <img src="../res/sticker.png" alt="Atterrisseur" />
+      </figure>
+      <p class="inventory-header">Vous avez déjà trouvé</p>
+    </div>
+  </body>
+  <script>
+    var date = new Date();
+    const time =
+      "Timecode : " +
+      date.getHours() +
+      "-" +
+      date.getMinutes() +
+      "-" +
+      date.getSeconds();
+    const inventory_header =
+      document.getElementsByClassName("inventory-header")[0];
+    inventory_header.textContent = time;
+  </script>
+</html>

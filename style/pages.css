@@ -202,6 +202,27 @@ body div {
   padding: 1em 0;
 }
 
+.inventory-container button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+  cursor: pointer;
+  border: 4px solid #b51717;
+  font-size: 1.5rem;
+}
+
+.inventory-container button:hover {
+  background-color: #b51717;
+}
+
 .inventory-container .item-card {
   background: none;
   border: 3px solid #ccc;

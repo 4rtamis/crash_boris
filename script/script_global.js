@@ -26,11 +26,11 @@ for (var [key, value] of parts) {
   }
 }
 if (check) {
-  if (
-    window.confirm(
-      "Vous avez gagné, accepter pour aller à la page du certificat !!"
-    )
-  ) {
-    window.location = "https://crashboris.h.minet.net/win.html";
-  }
+  const inventory_container = document.getElementsByClassName(
+    "inventory-container"
+  )[0];
+  inventory_container.innerHTML = `<button onclick="window.location='./proof_of_victory.html'">Obtenir ma récompense</button>`;
+  const inventory_header =
+    document.getElementsByClassName("inventory-header")[0];
+  inventory_header.textContent = "Vous avez tout trouvé !";
 }
