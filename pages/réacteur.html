@@ -1,61 +1,60 @@
 <!DOCTYPE html>
 <html lang="fr">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="viewport" content="height=device-height, initial-scale=1.0" />
     <link rel="stylesheet" href="../style/pages.css" />
     <title>Le réacteur</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="main-container">
-        <h2 class="header">Le réacteur</h2>
-        <p class="description">
-            C’est le réacteur du vaisseau spatial de Boris ! Belle trouvaille, même si on peut se demander s’il tiendra
-            la charge une fois que Boris se sera désaltéré au bar…
-        </p>
-        <figure class="image-wrapper">
-            <img src="../res/_placeholder.jpg" alt="Placeholder" />
-        </figure>
-        <p class="inventory-header">Vous avez déjà trouvé</p>
-        <div class="inventory-container">
-            <div class="item-card" id="réacteur">
-                <h3 id="réacteur_title"></h3>
-                <p id="réacteur_p"></p>
-            </div>
-            <div class="item-card" id="gravitateur">
-                <h3 id="gravitateur_title"></h3>
-                <p id="gravitateur_p"></p>
-            </div>
-            <div class="item-card" id="atterrisseur">
-                <h3 id="atterrisseur_title"></h3>
-                <p id="atterrisseur_p"></p>
-            </div>
-            <div class="item-card" id="hublot">
-                <h3 id="hublot_title"></h3>
-                <p id="hublot_p"></p>
-            </div>
-            <div class="item-card" id="coque_principale">
-                <h3 id="coque_principale_title"></h3>
-                <p id="coque_principale_p"></p>
-            </div>
-            <div class="item-card" id="batte_interstellaire">
-                <h3 id="batte_interstellaire_title"></h3>
-                <p id="batte_interstellaire_p"></p>
-            </div>
+      <h2 class="header">Le réacteur</h2>
+      <p class="description">
+        C’est le réacteur du vaisseau spatial de Boris ! Belle trouvaille, même
+        si on peut se demander s’il tiendra la charge une fois que Boris se sera
+        désaltéré au bar…
+      </p>
+      <figure class="image-wrapper">
+        <img src="../res/réacteur.png" alt="Réacteur" />
+      </figure>
+      <p class="inventory-header">Vous avez déjà trouvé</p>
+      <div class="inventory-container">
+        <div class="item-card" id="réacteur">
+          <h3 id="réacteur_title"></h3>
+          <p id="réacteur_p"></p>
         </div>
+        <div class="item-card" id="gravitateur">
+          <h3 id="gravitateur_title"></h3>
+          <p id="gravitateur_p"></p>
+        </div>
+        <div class="item-card" id="atterrisseur">
+          <h3 id="atterrisseur_title"></h3>
+          <p id="atterrisseur_p"></p>
+        </div>
+        <div class="item-card" id="hublot">
+          <h3 id="hublot_title"></h3>
+          <p id="hublot_p"></p>
+        </div>
+        <div class="item-card" id="coque_principale">
+          <h3 id="coque_principale_title"></h3>
+          <p id="coque_principale_p"></p>
+        </div>
+        <div class="item-card" id="batte_interstellaire">
+          <h3 id="batte_interstellaire_title"></h3>
+          <p id="batte_interstellaire_p"></p>
+        </div>
+      </div>
     </div>
-</body>
-<script>
+  </body>
+  <script>
     const item_name = "réacteur";
     if (!localStorage.getItem(item_name)) {
-        localStorage.setItem(item_name, true);
+      localStorage.setItem(item_name, true);
     }
     document.getElementById(item_name).classList.add("active");
-</script>
-<script src="../script/script_global.js"></script>
-
+  </script>
+  <script src="../script/script_global.js"></script>
 </html>
