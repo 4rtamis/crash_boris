@@ -10,6 +10,15 @@
   <title>Moteur</title>
 </head>
 
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="height=device-height, initial-scale=1.0" />
+  <link rel="stylesheet" href="../style/pages.css" />
+  <title>Moteur</title>
+</head>
+
 <body>
   <div class="main-container">
     <h2 class="header">Moteur</h2>
@@ -48,9 +57,15 @@
         <p id=" batte_interstellaire_p"></p>
       </div>
     </div>
-  </div>
 </body>
+<script>
+  //Verify if this item already exist
+  const item_name = "réacteur";
+  if (!localStorage.getItem(item_name)) {
+    localStorage.setItem(item_name, true);
+  }
+  document.getElementById(item_name).classList.add("active");
+</script>
 <script src="../script/script_global.js"></script>
-<script src="./_script_template.js"></script>
 
 </html>
