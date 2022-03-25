@@ -29,7 +29,7 @@ if (check) {
   const inventory_container = document.getElementsByClassName(
     "inventory-container"
   )[0];
-  inventory_container.innerHTML = `<button onclick="window.location='./proof_of_victory.html'">Obtenir ma récompense</button>`;
+  inventory_container.innerHTML = `<button onclick="window.location='./proof_of_victory-iucIp5A9Gh.html'">Obtenir ma récompense</button>`;
   const inventory_header =
     document.getElementsByClassName("inventory-header")[0];
   inventory_header.textContent = "Vous avez tout trouvé !";
